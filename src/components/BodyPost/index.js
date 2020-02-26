@@ -36,7 +36,7 @@ class HeaderPost extends React.Component {
           id="img_heart"
           src={this.state.likeImg}
           alt=""
-          onClick={this.likeClick.bind(this)}
+          onClick={this.likeClick}
         />
         <img className="img_icon bubble" alt="" src="/images/speech-bubble.png" />
         <img className="img_icon send" alt="" src="/images/send.png" />

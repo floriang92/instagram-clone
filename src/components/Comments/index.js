@@ -8,17 +8,17 @@ class Comments extends React.Component {
   }
 
   onChange = (event) => {
-    this.setState({ term: event.target.value });
+    this.setState({ newComment: event.target.value });
   }
 
   onSubmit = (event) => {
     event.preventDefault();
     this.state.comments.unshift({
-      textComment: this.state.term,
+      textComment: this.state.newComment,
       userImgComment: "/images/users/homer.jpg",
     });
     this.setState({
-      term: ''
+      newComment: ''
     });
   }
 
@@ -29,7 +29,7 @@ class Comments extends React.Component {
           <div>
 
             <form onSubmit={this.onSubmit}>
-              <input value={this.state.term} onChange={this.onChange} placeholder="Ajouter un commentaire" className="form-control" />
+              <input value={this.state.newComment} onChange={this.onChange} placeholder="Ajouter un commentaire" className="form-control" />
               <button className="btn btn-primary">Envoyer</button>
             </form>
             <br />
