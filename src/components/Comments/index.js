@@ -13,7 +13,7 @@ class Comments extends React.Component {
     ]
   };
 
-  sendComment = function () {
+  sendComment = function() {
     let texte = document.getElementById("inputComment").value;
     const commentaires = this.state.commentaires.slice();
     commentaires.push({ texte: texte });
@@ -43,16 +43,19 @@ class Comments extends React.Component {
             </form>
 
             <ul>
-              < li >
-                <img id="img_com" class="rounded-circle mr-3" alt="" src="" />
-                <span>{this.props.comment}
-                </span>
+              <li>
+                <img
+                  id="img_com"
+                  class="rounded-circle mr-3"
+                  alt=""
+                  src={this.props.img}
+                />
+                <span>{this.props.comment}</span>
               </li>
             </ul>
           </div>
         </div>
-
-      </div >
+      </div>
     );
   }
 }
