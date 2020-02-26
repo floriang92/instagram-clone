@@ -22,6 +22,15 @@ class Post extends React.Component {
               nbLike={postDetail.nbLike}
               description={postDetail.description}
             ></BodyPost>
+            {
+              postDetail.comments.map((comment, k) => {
+                return (
+                  <Comments
+                    img={comment.userImgComment}
+                    textComment={comment.textComment}
+                  ></Comments>)
+              })
+            }
           </div>
         )
       })

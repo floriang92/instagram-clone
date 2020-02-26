@@ -2,25 +2,6 @@ import React from "react";
 import "./Comments.css";
 
 class Comments extends React.Component {
-  state = {
-    commentaires: [
-      { id: 1, texte: "Lorem ipsum" },
-      { id: 2, texte: "est simplement du faux texte employé" },
-      {
-        id: 3,
-        texte: "dans la composition et la mise en page avant impression."
-      }
-    ]
-  };
-
-  sendComment = function() {
-    let texte = document.getElementById("inputComment").value;
-    const commentaires = this.state.commentaires.slice();
-    commentaires.push({ texte: texte });
-    this.setState({ commentaires: commentaires });
-    document.getElementById("inputComment").value = "";
-  };
-
   render() {
     return (
       <div>
@@ -36,7 +17,6 @@ class Comments extends React.Component {
               <boutton
                 type="button"
                 class="btn btn-primary"
-                onClick={this.sendComment.bind(this)}
               >
                 Commenter
               </boutton>
@@ -50,7 +30,7 @@ class Comments extends React.Component {
                   alt=""
                   src={this.props.img}
                 />
-                <span>{this.props.comment}</span>
+                <span>{this.props.textComment}</span>
               </li>
             </ul>
           </div>
