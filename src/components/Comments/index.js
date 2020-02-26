@@ -7,42 +7,39 @@ class Comments extends React.Component {
     comments: this.props.commentaires
   }
 
-  sendComment = function () {
-    let texte = document.getElementById("inputComment").value;
-    const commentaire = this.state.comments.slice();
-    commentaire.unshift({ textComment: texte, userImgComment: "/images/users/homer.jpg" });
-    this.setState({ comments: commentaire });
-    document.getElementById("inputComment").value = "";
-  };
+  onChange = (event) => {
+    this.setState({ term: event.target.value });
+  }
+
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.state.comments.unshift({
+      textComment: this.state.term,
+      userImgComment: "/images/users/homer.jpg",
+    });
+    this.setState({
+      term: ''
+    });
+  }
 
   render() {
     return (
       <div>
-        <div class="card-body d-flex flex-row">
+        <div className="card-body d-flex flex-row">
           <div>
-            <form>
-              <input
-                type="text"
-                class="form-control noBorder"
-                placeholder="Add a comment..."
-                id="inputComment"
-              />
-              <boutton
-                type="button"
-                class="btn btn-primary"
-                onClick={this.sendComment.bind(this)}
-              >
-                Commenter
-              </boutton>
+
+            <form onSubmit={this.onSubmit}>
+              <input value={this.state.term} onChange={this.onChange} placeholder="Ajouter un commentaire" className="form-control" />
+              <button className="btn btn-primary">Envoyer</button>
             </form>
             <br />
             <ul>
-              {this.state.comments.map((comment, k) => {
+              {this.state.comments.map((comment) => {
                 return (
                   <li>
                     <img
                       id="img_com"
-                      class="rounded-circle mr-3"
+                      className="rounded-circle mr-3"
                       alt="userImg"
                       src={comment.userImgComment}
                     />

@@ -8,41 +8,40 @@ class HeaderPost extends React.Component {
     likeImg: "/images/heart.png",
   };
 
-  incrementLike = function () {
+  incrementLike = () => {
     this.setState(state => {
       return { nbLike: state.nbLike + 1, like: true, likeImg: "/images/heart_like.png" };
     });
   };
 
-  decrementLike = function () {
+  decrementLike = () => {
     this.setState(state => {
       return { nbLike: state.nbLike - 1, like: false, likeImg: "/images/heart.png" };
     });
   };
 
-  //TODO revoir la forme
-  likeClick = function () {
-    if (!this.state.like) {
-      this.incrementLike();
-    } else {
+  likeClick = () => {
+    if (this.state.like) {
       this.decrementLike();
+    } else {
+      this.incrementLike();
     }
   };
 
   render() {
     return (
-      <div class="card-body" >
-        <img class="card-img-top" id="img_post" alt="" src={this.props.postImg} />
+      <div className="card-body" >
+        <img className="card-img-top" id="img_post" alt="" src={this.props.postImg} />
         <img
           id="img_heart"
           src={this.state.likeImg}
           alt=""
           onClick={this.likeClick.bind(this)}
         />
-        <img class="img_icon bubble" alt="" src="/images/speech-bubble.png" />
-        <img class="img_icon send" alt="" src="/images/send.png" />
+        <img className="img_icon bubble" alt="" src="/images/speech-bubble.png" />
+        <img className="img_icon send" alt="" src="/images/send.png" />
         <p>{this.state.nbLike} likes</p>
-        <p class="card-text">{this.props.description}</p>
+        <p className="card-text">{this.props.description}</p>
       </div>
 
     );

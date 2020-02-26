@@ -3,11 +3,4 @@
   width: 32px;
 }
 
-.noBorder {
-  border-style: hidden !important;
-}
 
-#invisible {
-  border: none;
-  visibility: hidden;
-}

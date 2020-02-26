@@ -8,9 +8,9 @@ import postData from "../../data/postData.json";
 class Post extends React.Component {
   render() {
     return (
-      postData.map((postDetail, index) => {
+      postData.map((postDetail) => {
         return (
-          <div class="card centre" id="card_style">
+          <div className="card centre" id="card_style">
             <HeaderPost
               userImg={postDetail.userImg}
               userName={postDetail.userName}
