@@ -4,7 +4,6 @@ import Comments from "../Comments/index";
 import HeaderPost from "../HeaderPost/index";
 import BodyPost from "../BodyPost/index";
 import postData from "../../data/postData.json";
-import commentsData from "../../data/commentsData.json";
 
 class Post extends React.Component {
   render() {
@@ -22,15 +21,9 @@ class Post extends React.Component {
               nbLike={postDetail.nbLike}
               description={postDetail.description}
             ></BodyPost>
-            {
-              postDetail.comments.map((comment, k) => {
-                return (
-                  <Comments
-                    img={comment.userImgComment}
-                    textComment={comment.textComment}
-                  ></Comments>)
-              })
-            }
+            <Comments
+              commentaires={postDetail.comments}
+            ></Comments>
           </div>
         )
       })

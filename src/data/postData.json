@@ -2,22 +2,22 @@
     {
         "id": 1,
         "userName": "Une bière et jivay",
-        "userImg": "/images/logo_jivay.jpg",
+        "userImg": "/images/users/logo_jivay.jpg",
         "date": "28/03/2019",
         "postImg": "/images/guinness.jpg",
         "nbLike": 150,
         "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
         "comments": [
             {
-                "userImgComment": "/images/vilebrequin_logo.jpg",
+                "userImgComment": "/images/users/vilebrequin_logo.jpg",
                 "textComment": "Putain c'est génial !"
             },
             {
-                "userImgComment": "/images/vilebrequin_logo.jpg",
+                "userImgComment": "/images/users/jacques.jpg",
                 "textComment": "commentaire 2 !"
             },
             {
-                "userImgComment": "/images/vilebrequin_logo.jpg",
+                "userImgComment": "/images/users/reactjs.png",
                 "textComment": "commentaire 3 !"
             }
         ]
@@ -25,22 +25,22 @@
     {
         "id": 2,
         "userName": "Vilebrequin",
-        "userImg": "/images/vilebrequin_logo.jpg",
+        "userImg": "/images/users/vilebrequin_logo.jpg",
         "date": "30/03/2019",
         "postImg": "/images/voiture_en_y.jpg",
         "nbLike": 30000,
         "description": "Une voiture peut-elle CABRER en Y ?! Vultech réponses à vos question #2",
         "comments": [
             {
-                "userImgComment": "/images/logo_jivay.jpg",
+                "userImgComment": "/images/users/logo_jivay.jpg",
                 "textComment": "azerty"
             },
             {
-                "userImgComment": "/images/logo_jivay.jpg",
+                "userImgComment": "/images/users/reactjs.png",
                 "textComment": "cqsdfsqdfsqdf !"
             },
             {
-                "userImgComment": "/images/logo_jivay.jpg",
+                "userImgComment": "/images/users/jacques.jpg",
                 "textComment": "sdfsqdfsdqfsqfsqdf !"
             }
         ]
